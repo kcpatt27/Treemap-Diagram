@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Treemap Diagrams</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+            }
+            #menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #menu-content {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                z-index: 1000;
+            }
+            #menu-content div {
+                margin: 5px 0;
+                cursor: pointer;
+            }
+            .chart-container {
+                display: none;
+            }
+            #tooltip {
+                position: absolute;
+                visibility: hidden;
+                background: lightgray;
+                padding: 5px;
+                border-radius: 3px;
+            }
+            .legend-item {
+                height: 20px;
+                width: 100px;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Treemap Diagram</h1>
+        <p id="description">description</p>
+        <div id="menu">Menu</div>
+        <div id="menu-content">
+            <div data-chart="kickstarter-chart">KickStarter Pledges</div>
+            <div data-chart="videoGame-chart">Video Game Sales</div>
+            <div data-chart="movie-chart">Movie Sales</div>
+        </div>
+        <div id="videoGame-chart" class="chart-container"></div>
+        <div id="kickstarter-chart" class="chart-container"></div>
+        <div id="movie-chart" class="chart-container"></div>
+        <div id="tooltip"></div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
